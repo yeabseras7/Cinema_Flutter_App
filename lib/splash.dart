@@ -1,5 +1,4 @@
 import 'package:cinema/home.dart';
-import 'package:cinema/main.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {
@@ -28,13 +27,7 @@ class _SplashState extends State<Splash> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(child: Image.asset("assets/images/Ticket.png")),
-            // Container(
-            //   child: Text(
-            //     'Splash Screen',
-            //     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,)
-            //     ),
-            // ),
+            Image.asset("assets/images/Ticket.png"),            
           ],
         ),
       ),
