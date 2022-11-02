@@ -1,4 +1,5 @@
 import 'package:cinema/extensions/context_extensions.dart';
+import 'package:cinema/screens/login.dart';
 import 'package:cinema/utils/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/button/gf_button.dart';
@@ -55,7 +56,13 @@ class _HomeState extends State<Home> {
                 Expanded(
                   child: GFButton(
                           color: Constants.primaryColor,
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const Login())
+                            );
+                          
+                          },
                           text: "Login",
                           shape: GFButtonShape.pills,
                           blockButton: true,
@@ -71,7 +78,12 @@ class _HomeState extends State<Home> {
               children: [
                 Expanded(child: GFButton(
                           color: Constants.primaryColor,
-                          onPressed: (){},
+                          onPressed: (){
+                            //  Navigator.push(
+                              // context,
+                              // MaterialPageRoute(builder: (context) => const ())
+                            //  );
+                          },
                           text: "Register",
                           shape: GFButtonShape.pills,
                           blockButton: true,
