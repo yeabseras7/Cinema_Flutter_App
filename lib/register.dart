@@ -11,13 +11,13 @@ class Register extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black12,
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 80),
+            const SizedBox(height: 50),
             Container(
                 alignment: Alignment.topLeft,
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(15),
                 child: const Text(
                   'Register',
                   style: TextStyle(fontSize: 20, color: Colors.white),
@@ -29,7 +29,7 @@ class Register extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: TextFormField(
                 style: const TextStyle(color: Colors.white),
-                obscureText: true,
+                obscureText: false,
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
                   labelText: 'Name',
@@ -45,7 +45,7 @@ class Register extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: TextFormField(
                 style: const TextStyle(color: Colors.white),
-                obscureText: true,
+                obscureText: false,
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
                   labelText: 'Email',
@@ -61,7 +61,7 @@ class Register extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: TextFormField(
                 style: const TextStyle(color: Colors.white),
-                obscureText: true,
+                obscureText: false,
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
                   labelText: 'Address',
@@ -77,7 +77,7 @@ class Register extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: TextFormField(
                 style: const TextStyle(color: Colors.white),
-                obscureText: true,
+                obscureText: false,
                 decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
                   labelText: 'Phone number',
@@ -89,8 +89,44 @@ class Register extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 200,
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: TextFormField(
+                style: const TextStyle(color: Colors.white),
+                obscureText: true,
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'Password',
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 15),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: TextFormField(
+                style: const TextStyle(color: Colors.white),
+                obscureText: true,
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'Confirm Password',
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 15),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                ),
+              ),
+            ),
+            const Center(
+              child: Expanded(
+                child: SizedBox(
+                  height: 130,
+                ),
+              ),
             ),
             Row(
               children: [
@@ -114,7 +150,7 @@ class Register extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
