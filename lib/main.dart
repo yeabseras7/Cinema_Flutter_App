@@ -17,13 +17,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AnimatedSplashScreen(splash: 
-      Image.asset("assets/images/Ticket.png"),
-      duration: 1500,
-      splashTransition: SplashTransition.scaleTransition,
-      backgroundColor: Colors.black,      
-      nextScreen: const Home()),
+      home: AnimatedSplashScreen(
+          splash: Image.asset("assets/images/Ticket.png"),
+          duration: 1500,
+          splashTransition: SplashTransition.scaleTransition,
+          backgroundColor: Colors.black,
+          nextScreen: const Home()),
     );
   }
 }
-

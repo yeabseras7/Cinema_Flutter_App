@@ -1,10 +1,12 @@
 import 'package:cinema/extensions/context_extensions.dart';
 import 'package:cinema/screens/login.dart';
+import 'package:cinema/register.dart';
 import 'package:cinema/utils/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/button/gf_button.dart';
 import 'package:getwidget/shape/gf_button_shape.dart';
 import 'package:getwidget/types/gf_button_type.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -56,12 +58,27 @@ class _HomeState extends State<Home> {
                 Expanded(
                   child: GFButton(
                           color: Constants.primaryColor,
-                          onPressed: (){
+                          onPressed: (){              
+                             GFButton(
+                              color: Constants.primaryColor,
+                              text: "Register",
+                              shape: GFButtonShape.pills,
+                              blockButton: true,
+                              type: GFButtonType.outline2x,
+                              fullWidthButton: true,
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const Register()),
+                                );
+                              },
+                            );
+
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) => const Login())
-                            );
-                          
+                            );                          
                           },
                           text: "Login",
                           shape: GFButtonShape.pills,
@@ -75,30 +92,29 @@ class _HomeState extends State<Home> {
             ),
 
             Row(
-              children: [
-                Expanded(child: GFButton(
-                          color: Constants.primaryColor,
-                          onPressed: (){
-                            //  Navigator.push(
-                              // context,
-                              // MaterialPageRoute(builder: (context) => const ())
-                            //  );
-                          },
-                          text: "Register",
-                          shape: GFButtonShape.pills,
-                          blockButton: true,
-                          type: GFButtonType.outline2x,
-                          fullWidthButton: true,
-                      ),
-                      
+              children: <Widget>[
+                Expanded(
+                  child: GFButton(
+                    color: Constants.primaryColor,
+                    text: "Register",
+                    shape: GFButtonShape.pills,
+                    blockButton: true,
+                    type: GFButtonType.outline2x,
+                    fullWidthButton: true,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Register()),
+                      );
+                    },
+                  ),
                 )
-
               ],
             )
           ],
-         
         ),
       ),
-      );
+    );
   }
 }
