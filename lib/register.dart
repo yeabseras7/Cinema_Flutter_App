@@ -1,4 +1,5 @@
 import 'package:cinema/utils/constant.dart';
+import 'package:cinema/welocme.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/button/gf_button.dart';
 import 'package:getwidget/shape/gf_button_shape.dart';
@@ -138,10 +139,10 @@ class Register extends StatelessWidget {
                     type: GFButtonType.outline2x,
                     fullWidthButton: true,
                     onPressed: () {
-                      //   Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(builder: (context) => const Home()),
-                      //   );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Welcome()),
+                      );
                     },
                     child: const Text(
                       'Register',
