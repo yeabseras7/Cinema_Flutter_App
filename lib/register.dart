@@ -14,60 +14,82 @@ class Register extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: 80),
-            Text(
-              'Register',
-              style: TextStyle(fontSize: 30, color: Colors.white),
-            ),
-            SizedBox(
+            const SizedBox(height: 80),
+            Container(
+                alignment: Alignment.topLeft,
+                padding: const EdgeInsets.all(10),
+                child: const Text(
+                  'Register',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                )),
+            const SizedBox(
               height: 10,
             ),
-            Text(
-              'Full name',
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
             Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: TextFormField(
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 obscureText: true,
-                decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    labelText: 'name',
-                    labelStyle: TextStyle(color: Colors.white, fontSize: 15)),
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: 'Name',
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 15),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                ),
               ),
             ),
-            Text(
-              'Email',
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: TextFormField(
+                style: const TextStyle(color: Colors.white),
+                obscureText: true,
+                decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
-                  labelText: 'Type your Email',
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 15)),
+                  labelText: 'Email',
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 15),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                ),
+              ),
             ),
-            Text(
-              'Address',
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: TextFormField(
+                style: const TextStyle(color: Colors.white),
+                obscureText: true,
+                decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
-                  labelText: 'Type your Address',
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 15)),
+                  labelText: 'Address',
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 15),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                ),
+              ),
             ),
-            Text(
-              'Phone number',
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
-            TextFormField(
-              decoration: const InputDecoration(
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: TextFormField(
+                style: const TextStyle(color: Colors.white),
+                obscureText: true,
+                decoration: const InputDecoration(
                   border: UnderlineInputBorder(),
-                  labelText: 'Type your phone number',
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 15)),
+                  labelText: 'Phone number',
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 15),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red)),
+                ),
+              ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 200,
             ),
             Row(
@@ -75,21 +97,20 @@ class Register extends StatelessWidget {
                 Expanded(
                   child: GFButton(
                     color: Constants.primaryColor,
-                    child: Text(
-                      'Register',
-                      style: TextStyle(fontSize: 27),
-                    ),
                     shape: GFButtonShape.pills,
                     blockButton: true,
                     type: GFButtonType.outline2x,
                     fullWidthButton: true,
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Register()),
-                      );
+                      //   Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(builder: (context) => const Home()),
+                      //   );
                     },
+                    child: const Text(
+                      'Register',
+                      style: TextStyle(fontSize: 27),
+                    ),
                   ),
                 ),
               ],
