@@ -26,11 +26,16 @@ class Register extends StatelessWidget {
               'Full name',
               style: TextStyle(color: Colors.white, fontSize: 20),
             ),
-            TextFormField(
-              decoration: const InputDecoration(
-                  border: UnderlineInputBorder(),
-                  labelText: 'Type your full name',
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 15)),
+            Container(
+              padding: EdgeInsets.all(10),
+              child: TextFormField(
+                style: TextStyle(color: Colors.white),
+                obscureText: true,
+                decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    labelText: 'name',
+                    labelStyle: TextStyle(color: Colors.white, fontSize: 15)),
+              ),
             ),
             Text(
               'Email',
