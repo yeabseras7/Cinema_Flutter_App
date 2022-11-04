@@ -3,6 +3,7 @@ import 'package:getwidget/components/button/gf_button.dart';
 import 'package:getwidget/shape/gf_button_shape.dart';
 
 import '../utils/constant.dart';
+import 'otp.dart';
 
 class Forgot extends StatelessWidget {
   const Forgot({Key? key}) : super(key: key);
@@ -53,10 +54,8 @@ class Forgot extends StatelessWidget {
               ),
             ),
             const Center(
-              child: Expanded(
-                child: SizedBox(
-                  height: 600,
-                ),
+              child: SizedBox(
+                height: 300,
               ),
             ),
             Row(
@@ -65,7 +64,12 @@ class Forgot extends StatelessWidget {
                 Expanded(
                   child: GFButton(
                     color: Constants.primaryColor,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Otp()),
+                      );
+                    },
                     text: "Send OTP",
                     size: 45,
                     shape: GFButtonShape.pills,
