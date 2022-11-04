@@ -141,7 +141,8 @@ class Register extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Welcome()),
+                        MaterialPageRoute(
+                            builder: (context) => const Welcome()),
                       );
                     },
                     child: const Text(

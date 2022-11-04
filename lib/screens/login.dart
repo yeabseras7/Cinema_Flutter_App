@@ -2,6 +2,7 @@ import 'package:cinema/utils/constant.dart';
 import 'package:flutter/material.dart';
 
 import '../welocme.dart';
+import 'forgot.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -17,7 +18,8 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(title: Text("A Cinema"), backgroundColor: Colors.black),
+      appBar:
+          AppBar(title: const Text("A Cinema"), backgroundColor: Colors.black),
       body: Body(),
     );
   }
@@ -37,7 +39,7 @@ class _LoginState extends State<Login> {
             Container(
               padding: const EdgeInsets.all(10),
               child: TextField(
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 controller: nameController,
                 decoration: const InputDecoration(
                     hintText: "Type your email",
@@ -56,7 +58,7 @@ class _LoginState extends State<Login> {
             Container(
               padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: TextField(
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 obscureText: true,
                 controller: passwordController,
                 decoration: const InputDecoration(
@@ -76,6 +78,10 @@ class _LoginState extends State<Login> {
             ),
             TextButton(
               onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Forgot()),
+                );
                 //forgot password screen
               },
               child: const Text(
