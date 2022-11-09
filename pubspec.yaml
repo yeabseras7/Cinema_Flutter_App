@@ -34,6 +34,9 @@ dependencies:
   animated_splash_screen: ^1.3.0
   google_fonts: ^3.0.1
   getwidget: ^2.0.4
+  flutter_svg: any
+  crypto_font_icons: ^1.0.1
+  typicons_flutter: ^0.5.0
 
 
 
@@ -65,6 +68,20 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/Ticket.png
+    - assets/images/blackadam.jpg
+    - assets/images/BulletTrain.jpeg
+    - assets/images/minions.jpg
+    - assets/images/thelostcity.jpg
+    - assets/images/topgun.jpeg
+    - assets/images/topgun1.jpeg
+    - assets/images/woman.jpeg
+
+    - assets/icons/add_to_cart.svg
+    - assets/icons/back.svg
+    - assets/icons/bag_1.svg
+    - assets/icons/cart.svg
+    - assets/icons/heart.svg
+    - assets/icons/search.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

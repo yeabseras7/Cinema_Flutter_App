@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-/// A utility class that holds constants for useful and commonly
-/// used values throughout the entire app.
-/// This class has no constructor and all variables are `static`.
+ const kDefaultPaddin = 20.0;
+
+ const KTextColor = Color(0xFF535353);
+const KTextLightColor = Color(0xFFACACAC);
+
 @immutable
 class Constants {
   const Constants._();
@@ -55,7 +57,7 @@ class Constants {
       Colors.transparent,
     ],
   );
-
+//  const kDefaultPaddin = 20.0;
   /// The black [LinearGradient] used to overlay movie backgrounds in the app.
   static const Gradient blackOverlayGradient = LinearGradient(
     begin: Alignment.topCenter,

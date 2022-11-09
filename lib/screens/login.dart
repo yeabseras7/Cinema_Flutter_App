@@ -1,8 +1,13 @@
+import 'package:cinema/models/movies.dart';
+import 'package:cinema/screens/detail/details_screen.dart';
+import 'package:cinema/screens/home/body.dart';
+import 'package:cinema/screens/next.dart';
 import 'package:cinema/utils/constant.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
-  const Login({super.key});
+  // final Movie movie;
+  // const Login({Key? key, required this.movie}) : super(key: key);
 
   @override
   State<Login> createState() => _LoginState();
@@ -11,6 +16,11 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  
+  get movie => null;
+
+  
+  
   @override
   Widget build(BuildContext context) {
      return Scaffold(
@@ -81,8 +91,11 @@ class _LoginState extends State<Login> {
                 style: ElevatedButton.styleFrom(backgroundColor: Constants.primaryColor),
                 child: const Text('Login', style: TextStyle(color: Colors.white)),
                 onPressed: () {
-                  print(nameController.text);
-                  print(passwordController.text);
+                  var movie;
+                  Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Bod(movie: movie,)),
+                      );
                 },
               )
           ),
