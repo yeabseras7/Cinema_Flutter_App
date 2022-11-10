@@ -1,4 +1,5 @@
 import 'package:cinema/models/movies.dart';
+import 'package:cinema/screens/detail/body.dart';
 import 'package:cinema/screens/detail/details_screen.dart';
 import 'package:cinema/screens/home/body.dart';
 import 'package:cinema/screens/next.dart';
@@ -108,9 +109,10 @@ class _LoginState extends State<Login> {
                 child:
                     const Text('Login', style: TextStyle(color: Colors.white)),
                 onPressed: () {
+                  var movie;
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Welcome()),
+                    MaterialPageRoute(builder: (context) => Bod(movie: movie,)),
                   );
                 },
               ),

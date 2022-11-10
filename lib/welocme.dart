@@ -1,3 +1,5 @@
+import 'package:cinema/models/movies.dart';
+import 'package:cinema/screens/home/body.dart';
 import 'package:cinema/utils/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/button/gf_button.dart';
@@ -6,6 +8,8 @@ import 'package:getwidget/types/gf_button_type.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
+  
+  get movie => movie;
 
   @override
   Widget build(BuildContext context) {
@@ -120,21 +124,26 @@ class Welcome extends StatelessWidget {
                 )
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Expanded(
-                  child: GFButton(
-                    color: Constants.primaryColor,
-                    onPressed: () {},
-                    text: "Browse Movies",
-                    size: 42,
-                    shape: GFButtonShape.pills,
-                    blockButton: true,
-                  ),
-                ),
-              ],
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //   children: <Widget>[
+            //     Expanded(
+            //       child: GFButton(
+            //         color: Constants.primaryColor,
+            //         onPressed: () {Navigator.push(
+            //             context,
+            //             MaterialPageRoute(
+            //                 builder: (context) => const ),
+            //           );
+            //           },
+            //         text: "Browse Movies",
+            //         size: 42,
+            //         shape: GFButtonShape.pills,
+            //         blockButton: true,
+            //       ),
+            //     ),
+            //   ],
+            // ),
           ],
         ),
       ),

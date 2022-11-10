@@ -6,7 +6,7 @@ import '../../utils/constant.dart';
 import '../detail/details_screen.dart';
 class Bod extends StatelessWidget {
   final Movie movie;
-  const Bod({Key? key,  required this.movie, }) : super(key: key);
+  const Bod({Key? key, required this.movie, }) : super(key: key);
  @override
  Widget build(BuildContext context) {
   
